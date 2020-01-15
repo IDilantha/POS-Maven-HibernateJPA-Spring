@@ -1,23 +1,24 @@
 package io.gihub.idilantha.pos.business.custom.impl;
 
-import business.custom.OrderBO;
-import dao.DAOFactory;
-import dao.DAOTypes;
-import dao.custom.*;
-import db.JPAUtil;
-import dto.OrderDTO;
-import dto.OrderDTO2;
-import dto.OrderDetailDTO;
-import entity.CustomEntity;
-import entity.Item;
-import entity.Order;
-import entity.OrderDetail;
+
+
+import io.gihub.idilantha.pos.business.custom.OrderBO;
+import io.gihub.idilantha.pos.dao.custom.*;
+import io.gihub.idilantha.pos.db.JPAUtil;
+import io.gihub.idilantha.pos.dto.OrderDTO;
+import io.gihub.idilantha.pos.dto.OrderDTO2;
+import io.gihub.idilantha.pos.dto.OrderDetailDTO;
+import io.gihub.idilantha.pos.entity.CustomEntity;
+import io.gihub.idilantha.pos.entity.Item;
+import io.gihub.idilantha.pos.entity.OrderDetail;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Component
 public class OrderBOImpl implements OrderBO {
 
     private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER);

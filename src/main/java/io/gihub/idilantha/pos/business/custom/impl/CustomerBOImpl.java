@@ -8,11 +8,13 @@ import io.gihub.idilantha.pos.db.JPAUtil;
 import io.gihub.idilantha.pos.dto.CustomerDTO;
 import io.gihub.idilantha.pos.entity.Customer;
 import javafx.scene.control.Alert;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CustomerBOImpl implements CustomerBO {
 
     private CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOTypes.CUSTOMER);

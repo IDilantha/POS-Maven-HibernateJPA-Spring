@@ -7,11 +7,13 @@ import io.gihub.idilantha.pos.db.JPAUtil;
 import io.gihub.idilantha.pos.dto.ItemDTO;
 import io.gihub.idilantha.pos.entity.Item;
 import javafx.scene.control.Alert;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ItemBOImpl implements ItemBO {
 
     private OrderDetailDAO orderDetailDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER_DETAIL);
