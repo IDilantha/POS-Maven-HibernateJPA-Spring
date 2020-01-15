@@ -1,7 +1,5 @@
 package io.gihub.idilantha.pos.db;
 
-
-
 import javafx.scene.control.Alert;
 import lk.ijse.dep.crypto.DEPCrypt;
 import javax.persistence.EntityManagerFactory;
@@ -37,7 +35,7 @@ public class JPAUtil {
         properties.setProperty("javax.persistence.jdbc.user",username);
         properties.setProperty("javax.persistence.jdbc.password",password);
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("POS-HibernateJPA", properties);
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("POS-HibernateJPA-Spring", properties);
         return entityManagerFactory;
     }
 
