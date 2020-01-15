@@ -1,8 +1,6 @@
 package io.gihub.idilantha.pos.business.custom.impl;
 
 import io.gihub.idilantha.pos.business.custom.ItemBO;
-import io.gihub.idilantha.pos.dao.DAOFactory;
-import io.gihub.idilantha.pos.dao.DAOTypes;
 import io.gihub.idilantha.pos.dao.custom.ItemDAO;
 import io.gihub.idilantha.pos.dao.custom.OrderDetailDAO;
 import io.gihub.idilantha.pos.db.JPAUtil;
