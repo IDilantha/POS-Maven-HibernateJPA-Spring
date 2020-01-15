@@ -1,17 +1,17 @@
 package io.gihub.idilantha.pos.controller;
 
-import business.BOFactory;
-import business.BOTypes;
-import business.custom.CustomerBO;
-import business.custom.ItemBO;
-import business.custom.OrderBO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import dto.CustomerDTO;
-import dto.ItemDTO;
-import dto.OrderDTO;
-import dto.OrderDetailDTO;
+import io.gihub.idilantha.pos.AppInitializer;
+import io.gihub.idilantha.pos.business.custom.CustomerBO;
+import io.gihub.idilantha.pos.business.custom.ItemBO;
+import io.gihub.idilantha.pos.business.custom.OrderBO;
+import io.gihub.idilantha.pos.dto.CustomerDTO;
+import io.gihub.idilantha.pos.dto.ItemDTO;
+import io.gihub.idilantha.pos.dto.OrderDTO;
+import io.gihub.idilantha.pos.dto.OrderDetailDTO;
+import io.gihub.idilantha.pos.util.OrderDetailTM;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -32,7 +32,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import util.OrderDetailTM;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -64,9 +64,9 @@ public class PlaceOrderFormController implements Initializable {
 
     private List<ItemDTO> tempItems = new ArrayList<>();
 
-    private CustomerBO customerBO = BOFactory.getInstance().getBO(BOTypes.CUSTOMER);
-    private ItemBO itemBO = BOFactory.getInstance().getBO(BOTypes.ITEM);
-    private OrderBO orderBO = BOFactory.getInstance().getBO(BOTypes.ORDER);
+    private CustomerBO customerBO = AppInitializer.ctx.getBean(CustomerBO.class);
+    private ItemBO itemBO = AppInitializer.ctx.getBean(ItemBO.class);
+    private OrderBO orderBO = AppInitializer.ctx.getBean(OrderBO.class);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

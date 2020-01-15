@@ -1,9 +1,11 @@
 package io.gihub.idilantha.pos.controller;
 
-import business.BOFactory;
-import business.BOTypes;
-import business.custom.OrderBO;
-import dto.OrderDTO2;
+
+import io.gihub.idilantha.pos.AppInitializer;
+import io.gihub.idilantha.pos.business.custom.CustomerBO;
+import io.gihub.idilantha.pos.business.custom.OrderBO;
+import io.gihub.idilantha.pos.dto.OrderDTO2;
+import io.gihub.idilantha.pos.util.OrderTM;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -19,8 +21,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import util.OrderTM;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -30,7 +30,7 @@ public class SearchOrdersFormController {
     public TextField txtSearch;
     public TableView<OrderTM> tblOrders;
     public AnchorPane root;
-    OrderBO orderBO = BOFactory.getInstance().getBO(BOTypes.ORDER);
+    OrderBO orderBO =  AppInitializer.ctx.getBean(OrderBO.class);
 
     public void initialize() throws Exception {
 

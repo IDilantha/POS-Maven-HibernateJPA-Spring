@@ -1,11 +1,12 @@
 package io.gihub.idilantha.pos.controller;
 
-import business.BOFactory;
-import business.BOTypes;
-import business.custom.ItemBO;
-import business.exception.AlreadyExistsInOrderException;
+
 import com.jfoenix.controls.JFXTextField;
-import dto.ItemDTO;
+import io.gihub.idilantha.pos.AppInitializer;
+import io.gihub.idilantha.pos.business.custom.ItemBO;
+import io.gihub.idilantha.pos.business.exception.AlreadyExistsInOrderException;
+import io.gihub.idilantha.pos.dto.ItemDTO;
+import io.gihub.idilantha.pos.util.ItemTM;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -23,7 +24,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import util.ItemTM;
 
 import java.io.IOException;
 import java.net.URL;
@@ -46,7 +46,7 @@ public class ManageItemFormController implements Initializable {
     @FXML
     private AnchorPane root;
 
-    private ItemBO itemBO = BOFactory.getInstance().getBO(BOTypes.ITEM);
+    private ItemBO itemBO = AppInitializer.ctx.getBean(ItemBO.class);
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -1,10 +1,11 @@
 package io.gihub.idilantha.pos.controller;
 
-import business.BOFactory;
-import business.BOTypes;
-import business.custom.CustomerBO;
-import business.exception.AlreadyExistsInOrderException;
-import dto.CustomerDTO;
+
+import io.gihub.idilantha.pos.AppInitializer;
+import io.gihub.idilantha.pos.business.custom.CustomerBO;
+import io.gihub.idilantha.pos.business.exception.AlreadyExistsInOrderException;
+import io.gihub.idilantha.pos.dto.CustomerDTO;
+import io.gihub.idilantha.pos.util.CustomerTM;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -24,7 +25,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
-import util.CustomerTM;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -50,7 +51,7 @@ public class ManageCustomerFormController implements Initializable {
     @FXML
     private TableView<CustomerTM> tblCustomers;
 
-    private CustomerBO customerBO = BOFactory.getInstance().getBO(BOTypes.CUSTOMER);
+    private CustomerBO customerBO = AppInitializer.ctx.getBean(CustomerBO.class);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

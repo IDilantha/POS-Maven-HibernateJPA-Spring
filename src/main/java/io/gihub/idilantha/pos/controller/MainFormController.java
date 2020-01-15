@@ -1,7 +1,8 @@
 package io.gihub.idilantha.pos.controller;
 
 import com.jfoenix.controls.JFXProgressBar;
-import db.JPAUtil;
+
+import io.gihub.idilantha.pos.db.JPAUtil;
 import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
