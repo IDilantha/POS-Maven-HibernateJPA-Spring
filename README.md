@@ -1,6 +1,6 @@
 
 
-# Point of Sale System with Maven and HibernateJPA
+# Point of Sale System with Maven and HibernateJPA - Spring
 
 Getting Started
 
@@ -12,6 +12,7 @@ This section should list any major frameworks that you built your project using.
 
 Maven
 HibernateJPA
+Spring
 
 Requirement
 
