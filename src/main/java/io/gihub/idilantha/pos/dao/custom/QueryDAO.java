@@ -1,7 +1,8 @@
 package io.gihub.idilantha.pos.dao.custom;
 
-import dao.SuperDAO;
-import entity.CustomEntity;
+
+import io.gihub.idilantha.pos.dao.SuperDAO;
+import io.gihub.idilantha.pos.entity.CustomEntity;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package io.gihub.idilantha.pos.dao.custom;
 
 
-import dao.CrudDAO;
-import entity.Customer;
+import io.gihub.idilantha.pos.dao.CrudDAO;
+import io.gihub.idilantha.pos.entity.Customer;
 
 public interface CustomerDAO extends CrudDAO<Customer, String> {
 

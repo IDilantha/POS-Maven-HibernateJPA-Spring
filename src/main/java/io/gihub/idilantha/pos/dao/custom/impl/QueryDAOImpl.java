@@ -1,15 +1,19 @@
 package io.gihub.idilantha.pos.dao.custom.impl;
 
 
-import dao.custom.QueryDAO;
-import entity.CustomEntity;
+
+
+import io.gihub.idilantha.pos.dao.custom.QueryDAO;
+import io.gihub.idilantha.pos.entity.CustomEntity;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import org.hibernate.transform.Transformers;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 
+@Component
 public class QueryDAOImpl implements QueryDAO {
 
     protected EntityManager entityManager;

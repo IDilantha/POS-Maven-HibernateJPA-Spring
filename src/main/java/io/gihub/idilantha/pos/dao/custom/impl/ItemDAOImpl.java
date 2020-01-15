@@ -1,14 +1,12 @@
 package io.gihub.idilantha.pos.dao.custom.impl;
 
 
-import dao.CrudDAOImpl;
-import dao.custom.ItemDAO;
-import entity.Item;
+import io.gihub.idilantha.pos.dao.CrudDAOImpl;
+import io.gihub.idilantha.pos.dao.custom.ItemDAO;
+import io.gihub.idilantha.pos.entity.Item;
+import org.springframework.stereotype.Component;
 
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-
+@Component
 public class ItemDAOImpl extends CrudDAOImpl<Item,String> implements ItemDAO {
 
     @Override

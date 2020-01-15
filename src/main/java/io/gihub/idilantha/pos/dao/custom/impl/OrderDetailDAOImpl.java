@@ -1,18 +1,16 @@
 package io.gihub.idilantha.pos.dao.custom.impl;
 
 
-import dao.CrudDAOImpl;
-import dao.custom.OrderDetailDAO;
-import entity.OrderDetail;
-import entity.OrderDetailPK;
-import org.hibernate.query.NativeQuery;
+import io.gihub.idilantha.pos.dao.CrudDAOImpl;
+import io.gihub.idilantha.pos.dao.custom.OrderDetailDAO;
+import io.gihub.idilantha.pos.entity.OrderDetail;
+import io.gihub.idilantha.pos.entity.OrderDetailPK;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Query;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 
-public class OrderDetailDAOImpl extends CrudDAOImpl<OrderDetail,OrderDetailPK> implements OrderDetailDAO {
+@Component
+public class OrderDetailDAOImpl extends CrudDAOImpl<OrderDetail, OrderDetailPK> implements OrderDetailDAO {
 
     @Override
     public boolean existsByItemCode(String itemCode) throws Exception {

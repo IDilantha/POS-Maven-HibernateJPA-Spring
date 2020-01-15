@@ -1,8 +1,9 @@
 package io.gihub.idilantha.pos.dao.custom;
 
-import dao.CrudDAO;
-import entity.OrderDetail;
-import entity.OrderDetailPK;
+
+import io.gihub.idilantha.pos.dao.CrudDAO;
+import io.gihub.idilantha.pos.entity.OrderDetail;
+import io.gihub.idilantha.pos.entity.OrderDetailPK;
 
 public interface OrderDetailDAO extends CrudDAO<OrderDetail, OrderDetailPK> {
 

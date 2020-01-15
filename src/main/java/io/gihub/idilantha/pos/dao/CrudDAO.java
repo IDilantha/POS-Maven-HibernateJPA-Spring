@@ -1,6 +1,7 @@
 package io.gihub.idilantha.pos.dao;
 
-import entity.SuperEntity;
+
+import io.gihub.idilantha.pos.entity.SuperEntity;
 
 import java.util.List;
 

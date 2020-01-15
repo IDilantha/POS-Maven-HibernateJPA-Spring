@@ -1,13 +1,12 @@
 package io.gihub.idilantha.pos.dao.custom.impl;
 
-import dao.CrudDAOImpl;
-import dao.custom.CustomerDAO;
-import entity.Customer;
 
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
+import io.gihub.idilantha.pos.dao.CrudDAOImpl;
+import io.gihub.idilantha.pos.dao.custom.CustomerDAO;
+import io.gihub.idilantha.pos.entity.Customer;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomerDAOImpl extends CrudDAOImpl<Customer,String> implements CustomerDAO {
 
     @Override

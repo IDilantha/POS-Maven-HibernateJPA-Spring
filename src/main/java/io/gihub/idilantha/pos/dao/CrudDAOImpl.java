@@ -1,7 +1,7 @@
 package io.gihub.idilantha.pos.dao;
 
-import entity.SuperEntity;
-import org.hibernate.Session;
+
+import io.gihub.idilantha.pos.entity.SuperEntity;
 
 import javax.persistence.EntityManager;
 import java.io.Serializable;

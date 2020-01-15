@@ -1,15 +1,14 @@
 package io.gihub.idilantha.pos.dao.custom.impl;
 
-import dao.CrudDAOImpl;
-import dao.custom.OrderDAO;
-import entity.Order;
-import org.hibernate.query.NativeQuery;
+
+import io.gihub.idilantha.pos.dao.CrudDAOImpl;
+import io.gihub.idilantha.pos.dao.custom.OrderDAO;
+import io.gihub.idilantha.pos.entity.Order;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.Query;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 
+@Component
 public class OrderDAOImpl extends CrudDAOImpl<Order,Integer> implements OrderDAO {
 
     @Override
