@@ -8,6 +8,7 @@ import io.gihub.idilantha.pos.db.JPAUtil;
 import io.gihub.idilantha.pos.dto.CustomerDTO;
 import io.gihub.idilantha.pos.entity.Customer;
 import javafx.scene.control.Alert;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
@@ -17,8 +18,10 @@ import java.util.List;
 @Component
 public class CustomerBOImpl implements CustomerBO {
 
-    private CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOTypes.CUSTOMER);
-    private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER);
+    @Autowired
+    private CustomerDAO customerDAO;
+    @Autowired
+    private OrderDAO orderDAO ;
 
     @Override
     public void saveCustomer(CustomerDTO customer) throws Exception {

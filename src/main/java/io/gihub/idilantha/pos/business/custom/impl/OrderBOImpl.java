@@ -10,7 +10,9 @@ import io.gihub.idilantha.pos.dto.OrderDTO2;
 import io.gihub.idilantha.pos.dto.OrderDetailDTO;
 import io.gihub.idilantha.pos.entity.CustomEntity;
 import io.gihub.idilantha.pos.entity.Item;
+import io.gihub.idilantha.pos.entity.Order;
 import io.gihub.idilantha.pos.entity.OrderDetail;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
@@ -21,11 +23,16 @@ import java.util.List;
 @Component
 public class OrderBOImpl implements OrderBO {
 
-    private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER);
-    private OrderDetailDAO orderDetailDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER_DETAIL);
-    private ItemDAO itemDAO = DAOFactory.getInstance().getDAO(DAOTypes.ITEM);
-    private QueryDAO queryDAO = DAOFactory.getInstance().getDAO(DAOTypes.QUERY);
-    private CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOTypes.CUSTOMER);
+    @Autowired
+    private OrderDAO orderDAO;
+    @Autowired
+    private OrderDetailDAO orderDetailDAO;
+    @Autowired
+    private ItemDAO itemDAO ;
+    @Autowired
+    private QueryDAO queryDAO;
+    @Autowired
+    private CustomerDAO customerDAO;
 
 
     @Override
